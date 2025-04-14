@@ -54,6 +54,7 @@
       color: #333;
       margin-top: 30px;
       font-style: italic;
+      display: none; /* Inicialmente escondido */
       animation: slideUp 2s ease-out;
     }
 
@@ -69,6 +70,26 @@
 
     img:hover {
       transform: scale(1.05);
+    }
+
+    /* Caixinha de surpresa */
+    .surprise-box {
+      width: 200px;
+      height: 200px;
+      background-color: #e63946;
+      color: white;
+      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .surprise-box:hover {
+      transform: scale(1.1);
     }
 
     /* Animações */
@@ -111,14 +132,30 @@
 <body>
 
   <div class="content">
-    <h1>Surpresa Especial</h1>
+    <h1>My Boo</h1>
     <p><span class="highlight">Eu estarei aqui, para sempre! Meu segredo ❤️‍🔥</span></p>
     
-    <!-- Substitua o link abaixo pela URL da sua imagem -->
-    <img src="https://drive.google.com/uc?export=view&id=120LgCpM8bmoR2c6jQZIPYKus5I2_XM_N" alt="Imagem romântica" />
-    
-    <p class="message">Essa é a minha surpresa pra você!</p>
+    <!-- Caixinha de surpresa -->
+    <div class="surprise-box" onclick="revealSurprise()">
+      Clique para ver a surpresa!
+    </div>
+
+    <!-- Mensagem e imagem escondidas -->
+    <div id="surpriseContent" class="message">
+      <p>Essa é a minha surpresa pra você!</p>
+      <!-- Substitua o link abaixo pela URL da sua imagem -->
+      <img src="https://drive.google.com/uc?export=view&id=120LgCpM8bmoR2c6jQZIPYKus5I2_XM_N" alt="Imagem romântica" />
+    </div>
   </div>
+
+  <script>
+    function revealSurprise() {
+      // Mostra o conteúdo da surpresa
+      document.getElementById('surpriseContent').style.display = 'block';
+      // Oculta a caixinha
+      document.querySelector('.surprise-box').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
