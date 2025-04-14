@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -7,29 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Surpresa</title>
   <style>
+    /* Resetando margens e padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo da página */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f9f9f9;
       color: #333;
       text-align: center;
-      padding: 50px;
+      padding: 0;
+      margin: 0;
     }
+
+    /* Conteúdo principal */
     .content {
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
       background-color: white;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-out;
     }
+
+    /* Título principal */
+    h1 {
+      font-size: 2.5em;
+      color: #e63946;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    /* Texto em negrito */
+    .highlight {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #e63946;
+    }
+
+    /* Estilo da mensagem */
     .message {
       font-size: 1.5em;
-      color: #e63946;
-      margin-top: 20px;
+      color: #333;
+      margin-top: 30px;
+      font-style: italic;
+      animation: slideUp 2s ease-out;
     }
+
+    /* Estilo da imagem */
     img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .message {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -37,10 +112,10 @@
 
   <div class="content">
     <h1>Surpresa Especial</h1>
-    <p><strong>Eu estarei aqui, para sempre! Meu segredo ❤️‍🔥</strong></p>
+    <p><span class="highlight">Eu estarei aqui, para sempre! Meu segredo ❤️‍🔥</span></p>
     
-    <!-- Adicione sua imagem abaixo -->
-    <img src="https://share.icloud.com/photos/06eN2rhxHSQBg2Lg_sPMzL7tg" alt="Imagem romântica" />
+    <!-- Substitua o link abaixo pela URL da sua imagem -->
+    <img src="https://drive.google.com/uc?export=view&id=120LgCpM8bmoR2c6jQZIPYKus5I2_XM_N" alt="Imagem romântica" />
     
     <p class="message">Essa é a minha surpresa pra você!</p>
   </div>
